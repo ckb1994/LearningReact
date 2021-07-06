@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React Project</title>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            #heading{
+                color: darkblue;
+            }
+            .heading{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Using conditional Component in Function</h1>
+        <div id="root"></div>
+        <script type = "text/babel">
+        
+        const Lake = ({name}) => <h1>It's {name} Lake</h1>;
+        const SkiResort = ({name}) => <h1>It's {name} SkiResort</h1>
+
+        const App = ({summer}) => (
+            <div>
+                {summer ?
+                    <Lake name = "LakeA" />:
+                    <SkiResort name = "ResortA" />
+                }    
+            </div>
+        )
+        
+        ReactDOM.render(
+            <App summer = {false}/>,
+            document.getElementById("root")
+        );
+        </script>
+    </body>
+</html>

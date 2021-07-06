@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React Project</title>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            #heading{
+                color: darkblue;
+            }
+            .heading{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Using Function</h1>
+        <div id="root"></div>
+        <script type = "text/babel">
+        //    const Hello = ()=> <h1>It return Single Element</h1>
+        const Hello = () => {
+            return (
+            <div className = "heading">
+                <h1>Using Multiple Elements 1</h1>
+                <h2>Using Multiple Elements 2</h2>
+            </div>
+            )
+        }
+            ReactDOM.render(
+                <Hello />,
+                document.getElementById("root")
+            );
+        </script>
+    </body>
+</html>

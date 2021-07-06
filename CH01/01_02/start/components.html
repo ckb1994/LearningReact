@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React Project</title>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            #heading{
+                color: darkblue;
+            }
+            .heading{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Using Component in Function</h1>
+        <div id="root"></div>
+        <script type = "text/babel">
+        
+        const Lake = ({name}) => <h1>Hello {name}</h1>;
+
+        const App = () => (
+            <div className = "heading">
+                <Lake name = "chandan" />
+                <Lake name = "ranjan" />
+                <Lake name = "gunjan" />
+                <Lake name = "chhotu" />
+            </div>
+        );
+            ReactDOM.render(
+                <App />,
+                document.getElementById("root")
+            );
+        </script>
+    </body>
+</html>
